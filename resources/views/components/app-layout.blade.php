@@ -10,7 +10,7 @@
             {{ config('app.name') }}
         @endisset
     </title>
-    @vite('resources/css/app.css')
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="h-full">
 <div class="min-h-full">

@@ -9,6 +9,14 @@ class UserController extends Controller
 {
     public function index()
     {
-      return User::get();
+      $users = User::query()->latest()->get();
+      return view('users.index', [
+        'users' => $users
+      ]);
+    }
+
+    public function create()
+    {
+      return view('users.create');
     }
 }
